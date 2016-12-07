@@ -1,0 +1,275 @@
+
+WARN:   ----------------------------------------------------------
+WARN:    Log file:  /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./build/log/crsp_dbsql2local.log
+WARN:   
+WARN:    Date:      23-Nov-2016 16:04:16
+WARN:    Input:     ./data
+WARN:    Output:    /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./build
+WARN:    Log level: 2
+WARN:   
+WARN:    System Information:
+WARN:     - Matlab:    8.1.0.604 (R2013a), February 15, 2013
+WARN:     - Java VM:   Java 1.6.0_17-b04 with Sun Microsystems Inc. Java HotSpot(TM) 64-Bit Server VM mixed mode
+WARN:     - OS:        GLNXA64, glnxa64
+WARN:     - Max array: 281474976710655
+WARN:   ----------------------------------------------------------
+WARN:   
+INFO:   Configuration, as read from disk (LiquidityStudy.conf): 
+INFO:   ------------------------------------------------
+INFO:   Retrieving property: =
+INFO:   Retrieving property: LIQ.CRSP.RNGseed=1234
+INFO:   Retrieving property: LIQ.CRSP.ami.sheet=Amihud
+INFO:   Retrieving property: LIQ.CRSP.ami.title2=Kyle's Lambda Price Impact, by SIC bucket
+INFO:   Retrieving property: LIQ.CRSP.hmc.sheet=HMCzzzz
+INFO:   Retrieving property: LIQ.CRSP.hmc.title2=HMC Probabilities for Liquidity State zzzz, by SIC bucket
+INFO:   Retrieving property: LIQ.CRSP.koa.sheet=KO_avg
+INFO:   Retrieving property: LIQ.CRSP.koa.title2=Average Kyle-Obizhaeva Price Impact, by SIC bucket
+INFO:   Retrieving property: LIQ.CRSP.kom.sheet=KO_med
+INFO:   Retrieving property: LIQ.CRSP.kom.title2=Median Kyle-Obizhaeva Price Impact, by SIC bucket
+INFO:   Retrieving property: LIQ.CRSP.local.DBdrv=com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:   Retrieving property: LIQ.CRSP.local.DBinst=OHMJ
+INFO:   Retrieving property: LIQ.CRSP.local.DBpass=
+INFO:   Retrieving property: LIQ.CRSP.local.DBurl=jdbc:sqlserver://PW12SQL12105F01.ofr.treas.gov:1433;database=WRDS_CRSP;integratedSecurity=true;
+INFO:   Retrieving property: LIQ.CRSP.local.DBuser=
+INFO:   Retrieving property: LIQ.CRSP.local.FetchBatchSize=100000
+INFO:   Retrieving property: LIQ.CRSP.local.RSLTname=results_CRSP_local.mat
+INFO:   Retrieving property: LIQ.CRSP.local.SelDates=SELECT DISTINCT DATE FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY date
+INFO:   Retrieving property: LIQ.CRSP.local.SelTypes=SELECT DISTINCT PERMNO FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY permno
+INFO:   Retrieving property: LIQ.CRSP.local.SelVals=SELECT DATE,PERMNO,PRC,VOL,RET,BID,ASK,SICCD,NAICS,SHROUT FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY permno,date
+INFO:   Retrieving property: LIQ.CRSP.local.SelVarD0=__D0__
+INFO:   Retrieving property: LIQ.CRSP.local.SelVarD1=__D1__
+INFO:   Retrieving property: LIQ.CRSP.local.cachename=CRSP_cache_local.mat
+INFO:   Retrieving property: LIQ.CRSP.local.cachetimetest=false
+INFO:   Retrieving property: LIQ.CRSP.local.forcecache=false
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.CRSP_parallel_cores=12
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.RSLTname=results_CRSP_lqmeas.mat
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.SIClist=0;1;2;3;4;5;60;61;62;63;64;65;67;7;8
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.cachename=CRSP_cache_lqmeas.mat
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.cachetimetest=true
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.forcecache=false
+INFO:   Retrieving property: LIQ.CRSP.lqmeas.metrics=KLAM;MINV1;MINV2;MART;TURN;BIDASK;ROLL;AMIH;LVOL
+INFO:   Retrieving property: LIQ.CRSP.markov.cachename=CRSP_cache_markov.mat
+INFO:   Retrieving property: LIQ.CRSP.markov.cachetimetest=false
+INFO:   Retrieving property: LIQ.CRSP.markov.forcecache=false
+INFO:   Retrieving property: LIQ.CRSP.pattern.cachename=CRSP_cache_pattern.mat
+INFO:   Retrieving property: LIQ.CRSP.pattern.cachetimetest=false
+INFO:   Retrieving property: LIQ.CRSP.pattern.forcecache=false
+INFO:   Retrieving property: LIQ.CRSP.results_matname=LIQ_CRSP_RESULTS-yyyymmdd.mat
+INFO:   Retrieving property: LIQ.CRSP.results_svgname=LIQ_CRSP_RESULTS-yyyymmdd.svg
+INFO:   Retrieving property: LIQ.CRSP.results_xlsname=LIQ_CRSP_RESULTS-yyyymmdd.xls
+INFO:   Retrieving property: LIQ.CRSP.startdate=19860102
+INFO:   Retrieving property: LIQ.CRSP.stopdate=20140331
+INFO:   Retrieving property: LIQ.CRSP.svg.namepfx=EquitySIC
+INFO:   Retrieving property: LIQ.CRSP.xls.title1=Date
+INFO:   Retrieving property: LIQ.HMC.K=3
+INFO:   Retrieving property: LIQ.HMC.burnin=100
+INFO:   Retrieving property: LIQ.HMC.logInputData=true
+INFO:   Retrieving property: LIQ.HMC.modelType=1
+INFO:   Retrieving property: LIQ.HMC.numStandardDevForStart=4
+INFO:   Retrieving property: LIQ.HMC.priorChange=50
+INFO:   Retrieving property: LIQ.HMC.priorDelta=0.1
+INFO:   Retrieving property: LIQ.HMC.priorSigma2Scale=1
+INFO:   Retrieving property: LIQ.HMC.priorSigma2Shape=1
+INFO:   Retrieving property: LIQ.HMC.priorSlopeVarRescale=100
+INFO:   Retrieving property: LIQ.HMC.sample=100
+INFO:   Retrieving property: LIQ.TRACE.local.DBdrv=com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:   Retrieving property: LIQ.TRACE.local.DBinst=OHMJ
+INFO:   Retrieving property: LIQ.TRACE.local.DBpass=
+INFO:   Retrieving property: LIQ.TRACE.local.DBurl=jdbc:sqlserver://SW12SQL12593F01.ofr.treas.gov:1433;database=OHMJ;integratedSecurity=true;
+INFO:   Retrieving property: LIQ.TRACE.local.DBuser=
+INFO:   Retrieving property: LIQ.TRACE.local.FetchBatchSize=100000
+INFO:   Retrieving property: LIQ.TRACE.local.RSLTname=results_TRACE_local.mat
+INFO:   Retrieving property: LIQ.TRACE.local.SelDates=SELECT DISTINCT trd_exctn_dt AS DATE FROM [OHMJ].[lm].[trace_final] WHERE trd_exctn_dt>='__D0__' AND trd_exctn_dt<='__D1__' ORDER BY DATE
+INFO:   Retrieving property: LIQ.TRACE.local.SelTypes=SELECT DISTINCT bond_sym_id AS BONDID FROM [OHMJ].[lm].[trace_final] WHERE trd_exctn_dt>='__D0__' AND trd_exctn_dt<='__D1__' AND bond_sym_id IS NOT NULL ORDER BY BONDID
+INFO:   Retrieving property: LIQ.TRACE.local.SelVals=SELECT trd_exctn_dt AS DATE, bond_sym_id AS BONDID, rptd_pr AS PRC, volsum AS VOL, SICCD FROM [OHMJ].[lm].[trace_final] WHERE trd_exctn_dt>='__D0__' AND trd_exctn_dt<='__D1__' AND bond_sym_id IS NOT NULL ORDER BY BONDID,DATE
+INFO:   Retrieving property: LIQ.TRACE.local.SelVarD0=__D0__
+INFO:   Retrieving property: LIQ.TRACE.local.SelVarD1=__D1__
+INFO:   Retrieving property: LIQ.TRACE.local.cachedir=.\data\TRACE_clean\non
+INFO:   Retrieving property: LIQ.TRACE.local.cachename=TRACE_cache_local.mat
+INFO:   Retrieving property: LIQ.TRACE.local.cachetimetest=false
+INFO:   Retrieving property: LIQ.TRACE.local.csvfile=trace_non_all.csv
+INFO:   Retrieving property: LIQ.TRACE.local.csvfile_bondid=bondid_non.csv
+INFO:   Retrieving property: LIQ.TRACE.local.csvfile_dates=dates_non.csv
+INFO:   Retrieving property: LIQ.TRACE.local.forcecache=false
+INFO:   Retrieving property: LIQ.TRACE.local.grade_clustering_depth=1
+INFO:   Retrieving property: LIQ.TRACE.local.gradelist=1;2;3
+INFO:   Retrieving property: LIQ.TRACE.local.maxPrice=200
+INFO:   Retrieving property: LIQ.TRACE.local.minPrice=5
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.Gradenum=11;12;13;14;21;22;23;24;25;26;31;32
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.RSLTname=results_TRACE_lqmeas.mat
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.SIC_clustering_depth=2
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.cachename=TRACE_cache_lqmeas.mat
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.cachetimetest=false
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.forcecache=false
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.metrics=MINV1;MINV2
+INFO:   Retrieving property: LIQ.TRACE.lqmeas.parallel_cores_req=12
+INFO:   Retrieving property: LIQ.TRACE.startdate=20020101
+INFO:   Retrieving property: LIQ.TRACE.stopdate=20140331
+INFO:   Retrieving property: LIQ.VIX.local.DBdrv=com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:   Retrieving property: LIQ.VIX.local.DBinst=OHMJ
+INFO:   Retrieving property: LIQ.VIX.local.DBpass=
+INFO:   Retrieving property: LIQ.VIX.local.DBurl=jdbc:sqlserver://SW12SQL12593F01.ofr.treas.gov:1433;database=OHMJ;integratedSecurity=true;
+INFO:   Retrieving property: LIQ.VIX.local.DBuser=
+INFO:   Retrieving property: LIQ.VIX.local.FetchBatchSize=0
+INFO:   Retrieving property: LIQ.VIX.local.RSLTname=results_VIX_local.mat
+INFO:   Retrieving property: LIQ.VIX.local.SelDates=SELECT DISTINCT [Date] FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='VIX' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY [Date]
+INFO:   Retrieving property: LIQ.VIX.local.SelTypes=SELECT DISTINCT Contract_Index_Num FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='VIX' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY Contract_Index_Num
+INFO:   Retrieving property: LIQ.VIX.local.SelVals=SELECT [Date],Contract_Index_Num,Price,Volume FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='VIX' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY Contract_Index_Num,[Date]
+INFO:   Retrieving property: LIQ.VIX.local.SelVarD0=__D0__
+INFO:   Retrieving property: LIQ.VIX.local.SelVarD1=__D1__
+INFO:   Retrieving property: LIQ.VIX.local.cachename=VIX_cache_local.mat
+INFO:   Retrieving property: LIQ.VIX.local.cachetimetest=false
+INFO:   Retrieving property: LIQ.VIX.local.forcecache=false
+INFO:   Retrieving property: LIQ.VIX.lqmeas.RSLTname=results_VIX_lqmeas.mat
+INFO:   Retrieving property: LIQ.VIX.lqmeas.cachename=VIX_cache_lqmeas.mat
+INFO:   Retrieving property: LIQ.VIX.lqmeas.cachetimetest=false
+INFO:   Retrieving property: LIQ.VIX.lqmeas.forcecache=false
+INFO:   Retrieving property: LIQ.VIX.lqmeas.metrics=MINV1;MINV2
+INFO:   Retrieving property: LIQ.VIX.lqmeas.parallel_cores=0
+INFO:   Retrieving property: LIQ.VIX.startdate=20040102
+INFO:   Retrieving property: LIQ.VIX.stopdate=20140618
+INFO:   Retrieving property: LIQ.WTI.local.DBdrv=com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:   Retrieving property: LIQ.WTI.local.DBinst=OHMJ
+INFO:   Retrieving property: LIQ.WTI.local.DBpass=
+INFO:   Retrieving property: LIQ.WTI.local.DBurl=jdbc:sqlserver://SW12SQL12593F01.ofr.treas.gov:1433;database=OHMJ;integratedSecurity=true;
+INFO:   Retrieving property: LIQ.WTI.local.DBuser=
+INFO:   Retrieving property: LIQ.WTI.local.FetchBatchSize=0
+INFO:   Retrieving property: LIQ.WTI.local.RSLTname=results_WTI_local.mat
+INFO:   Retrieving property: LIQ.WTI.local.SelDates=SELECT DISTINCT [Date] FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='WTI' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY [Date]
+INFO:   Retrieving property: LIQ.WTI.local.SelTypes=SELECT DISTINCT Contract_Index_Num FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='WTI' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY Contract_Index_Num
+INFO:   Retrieving property: LIQ.WTI.local.SelVals=SELECT [Date],Contract_Index_Num,Price,Volume FROM [OHMJ].[lm].[Bloomberg_VIX_WTI] WHERE Contract_Type='WTI' AND [Date]>='__D0__' AND [Date]<='__D1__' ORDER BY Contract_Index_Num,[Date]
+INFO:   Retrieving property: LIQ.WTI.local.SelVarD0=__D0__
+INFO:   Retrieving property: LIQ.WTI.local.SelVarD1=__D1__
+INFO:   Retrieving property: LIQ.WTI.local.cachename=WTI_cache_local.mat
+INFO:   Retrieving property: LIQ.WTI.local.cachetimetest=false
+INFO:   Retrieving property: LIQ.WTI.local.forcecache=false
+INFO:   Retrieving property: LIQ.WTI.lqmeas.RSLTname=results_WTI_lqmeas.mat
+INFO:   Retrieving property: LIQ.WTI.lqmeas.cachename=WTI_cache_lqmeas.mat
+INFO:   Retrieving property: LIQ.WTI.lqmeas.cachetimetest=false
+INFO:   Retrieving property: LIQ.WTI.lqmeas.forcecache=false
+INFO:   Retrieving property: LIQ.WTI.lqmeas.metrics=MINV1;MINV2
+INFO:   Retrieving property: LIQ.WTI.lqmeas.parallel_cores=0
+INFO:   Retrieving property: LIQ.WTI.startdate=19860102
+INFO:   Retrieving property: LIQ.WTI.stopdate=20140618
+INFO:   Retrieving property: LIQ.param.KLAM.estsize=22
+INFO:   Retrieving property: LIQ.param.KLAM.min_estobs=10
+INFO:   Retrieving property: LIQ.param.KLAM.min_regress_obs=10
+INFO:   Retrieving property: LIQ.param.KLAM.sample_max=10
+INFO:   Retrieving property: LIQ.param.LVOL.estsize=22
+INFO:   Retrieving property: LIQ.param.LVOL.min_estobs=10
+INFO:   Retrieving property: LIQ.param.MINV1.K0=8.21
+INFO:   Retrieving property: LIQ.param.MINV1.KI=2.50
+INFO:   Retrieving property: LIQ.param.MINV1.Pstar=40
+INFO:   Retrieving property: LIQ.param.MINV1.Sstar=0.02
+INFO:   Retrieving property: LIQ.param.MINV1.Vstar=1000000
+INFO:   Retrieving property: LIQ.param.MINV1.X=10000
+INFO:   Retrieving property: LIQ.param.MINV1.X_method=CONST_FRAC_DAILY_VOL
+INFO:   Retrieving property: LIQ.param.MINV1.alpha0=-0.33333333333333
+INFO:   Retrieving property: LIQ.param.MINV1.alphaI=0.33333333333333
+INFO:   Retrieving property: LIQ.param.MINV1.alphaX=1.0
+INFO:   Retrieving property: LIQ.param.MINV1.cost_clip=15
+INFO:   Retrieving property: LIQ.param.MINV1.sample_max=10
+INFO:   Retrieving property: LIQ.param.MINV1.sig_estim_lag=20
+INFO:   Retrieving property: LIQ.param.MINV1.sig_estim_minobs=5
+INFO:   Retrieving property: LIQ.param.MINV1.vol_adj=.01
+INFO:   Retrieving property: LIQ.param.MINV1.vol_estim_lag=20
+INFO:   Retrieving property: LIQ.param.MINV1.vol_estim_minobs=5
+INFO:   Retrieving property: LIQ.param.MINV2.K0=2.08
+INFO:   Retrieving property: LIQ.param.MINV2.KI=12.08
+INFO:   Retrieving property: LIQ.param.MINV2.Pstar=40
+INFO:   Retrieving property: LIQ.param.MINV2.Sstar=0.02
+INFO:   Retrieving property: LIQ.param.MINV2.Vstar=1000000
+INFO:   Retrieving property: LIQ.param.MINV2.X=10000
+INFO:   Retrieving property: LIQ.param.MINV2.X_method=CONST_FRAC_DAILY_VOL
+INFO:   Retrieving property: LIQ.param.MINV2.alpha0=-0.33333333333333
+INFO:   Retrieving property: LIQ.param.MINV2.alphaI=0.0
+INFO:   Retrieving property: LIQ.param.MINV2.alphaX=0.5
+INFO:   Retrieving property: LIQ.param.MINV2.cost_clip=15
+INFO:   Retrieving property: LIQ.param.MINV2.sample_max=10
+INFO:   Retrieving property: LIQ.param.MINV2.sig_estim_lag=20
+INFO:   Retrieving property: LIQ.param.MINV2.sig_estim_minobs=5
+INFO:   Retrieving property: LIQ.param.MINV2.vol_adj=.01
+INFO:   Retrieving property: LIQ.param.MINV2.vol_estim_lag=20
+INFO:   Retrieving property: LIQ.param.MINV2.vol_estim_minobs=5
+INFO:   Retrieving property: LIQ.param.MINVx.benchmarkStockPrice=40
+INFO:   Retrieving property: LIQ.param.MINVx.dailyVol=1000000
+INFO:   Retrieving property: LIQ.param.MINVx.dailyVolEstlag=20
+INFO:   Retrieving property: LIQ.param.MINVx.kappa_bar=7.91
+INFO:   Retrieving property: LIQ.param.MINVx.lambda_bar=2.89
+INFO:   Retrieving property: LIQ.param.MINVx.sample_max=10
+INFO:   Retrieving property: LIQ.param.MINVx.sigma=0.02
+INFO:   Retrieving property: LIQ.param.MINVx.sigma_estimlag=20
+INFO:   Retrieving property: LIQ.param.MINVx.tradeSize=100000
+INFO:   Retrieving property: LIQ.param.ROLL.estsize=22
+INFO:   Retrieving property: LIQ.param.ROLL.min_estobs=10
+INFO:   Retrieving property: LIQ.param.ROLL.poscov_rule=1
+INFO:   Retrieving property: cache_directory=./data/cache
+INFO:   Retrieving property: input_directory_lin=./data
+INFO:   Retrieving property: input_directory_win=H:\Projects\liquidity\branches\2014public\data
+INFO:   Retrieving property: log_name=OFR_liquidity_monitor_log
+INFO:   Retrieving property: log_relative_directory=log
+INFO:   Retrieving property: log_verbosity=2
+INFO:   Retrieving property: output_directory=./build
+INFO:   Retrieving property: search_path=util;..;../hmc_liquidity
+INFO:   Retrieving property: svn_repo=https://d01ofrwinsvn1p.do.treas.gov/svn/OFR
+INFO:   ------------------------------------------------
+INFO:   Retrieving property: search_path=util;..;../hmc_liquidity
+INFO:   
+INFO:   Base path is: /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid
+INFO:    -- adding path: /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/util
+INFO:    -- adding path: /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/..
+INFO:    -- adding path: /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/../hmc_liquidity
+INFO:   
+INFO:   Input directory (inputDir): ./data
+INFO:   Build directory (buildDir): /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./build
+INFO:   Cache directory (cacheDir): ./data/cache
+INFO:   
+INFO:   ----------------------------------------------------------
+INFO:   Running crsp_dbsql2local
+INFO:     configfile:    LiquidityStudy.conf
+INFO:   ----------------------------------------------------------
+INFO:   Retrieving property: LIQ.CRSP.local.cachename=CRSP_cache_local.mat
+INFO:   Retrieving property: LIQ.CRSP.local.cachetimetest=false
+INFO:   Retrieving property: LIQ.CRSP.local.forcecache=false
+INFO:   
+INFO:   ..........................................................
+INFO:   Checking cache
+INFO:    -- cpath  = /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./data/cache
+INFO:    -- cname  = CRSP_cache_local.mat
+INFO:    -- cttest = 0
+INFO:    -- bmfile = /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/crsp_dbsql2local.m
+INFO:    -- force  = 0
+INFO:   
+INFO:   Cachefile target:  /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./data/cache/CRSP_cache_local.mat
+INFO:   Cachefile exists:  0
+INFO:   ..........................................................
+WARN:   
+INFO:   Retrieving property: LIQ.CRSP.startdate=19860102
+INFO:   Retrieving property: LIQ.CRSP.stopdate=20140331
+INFO:   
+INFO:   Pulling the CRSP data
+INFO:   Retrieving property: LIQ.CRSP.local.DBinst=OHMJ
+INFO:   Retrieving property: LIQ.CRSP.local.DBdrv=com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:   Retrieving property: LIQ.CRSP.local.DBurl=jdbc:sqlserver://PW12SQL12105F01.ofr.treas.gov:1433;database=WRDS_CRSP;integratedSecurity=true;
+INFO:   Retrieving property: LIQ.CRSP.local.DBuser=
+INFO:   Retrieving property: LIQ.CRSP.local.DBpass=
+INFO:   Retrieving property: LIQ.CRSP.local.FetchBatchSize=100000
+INFO:   Retrieving property: LIQ.CRSP.local.SelVarD0=__D0__
+INFO:   Retrieving property: LIQ.CRSP.local.SelVarD1=__D1__
+INFO:   Retrieving property: LIQ.CRSP.local.SelDates=SELECT DISTINCT DATE FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY date
+INFO:   Retrieving property: LIQ.CRSP.local.SelTypes=SELECT DISTINCT PERMNO FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY permno
+INFO:   Retrieving property: LIQ.CRSP.local.SelVals=SELECT DATE,PERMNO,PRC,VOL,RET,BID,ASK,SICCD,NAICS,SHROUT FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='__D0__' AND date<='__D1__' ORDER BY permno,date
+INFO:   
+INFO:   Caching data in crsp_dbsql2local.m
+INFO:    -- cachefile: /data/OFR_USERDOCS/wshi/Systemic Commonalities/src/matlab/liquid/./data/cache/CRSP_cache_local.mat
+INFO:   
+INFO:   Database connection for CRSP cache:
+INFO:    -- DBinst:      OHMJ
+INFO:    -- DBuser:      
+INFO:    -- DBpass:      
+INFO:    -- DBdrv:       com.microsoft.sqlserver.jdbc.SQLServerDriver
+INFO:    -- DBurl:       jdbc:sqlserver://PW12SQL12105F01.ofr.treas.gov:1433;database=WRDS_CRSP;integratedSecurity=true;
+INFO:    -- DBbatchsize: 100000
+INFO:   
+INFO:   Database query for CRSP dates:
+INFO:     SELECT DISTINCT DATE FROM [WRDS_CRSP].[dbo].[SECURITIES_INDEX] WHERE date>='1986-01-02' AND date<='2014-03-31' ORDER BY date
