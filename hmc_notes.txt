@@ -1,0 +1,15 @@
+MC loops tend to be short, 100 to burn in and 100 to sample
+
+sigma2time (for observation equation) has the sigma for the state that it is in
+
+sfStateGDataAll1 holds state probabilities
+
+The outside loops are the monte carlo runs
+Random numbers are drawn from backwards function. 
+backwards/forward function have giant loops to calculate the backwards estimation and forward filter 
+	for all time periods
+	
+The HMM specification is:
+3 unobserved states
+time homogenous - transition matrix is same through time. 
+random process in each state is the same (same mean, same variance), through time.
